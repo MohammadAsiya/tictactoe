@@ -39,13 +39,20 @@ nav ul{
 .box:hover{
     background-color:rgb(162, 112, 208)
 }
+.info{
+    font-size:22px;
+}
 .gameInfo{
     padding:0 34px;
     font-family: 'Martian Mono', monospace;
     
 }
+.gameInfo h1{
+    font-size:1.5rem;
+}
 .imgbox img{
-    display: none;
+    width:0;
+    transition:width 1s ease-in-out;  
 }
 .br-0{
     border-right:0;
@@ -58,4 +65,37 @@ nav ul{
 }
 .bb-0{
     border-bottom:0;
+}
+#reset{
+    margin:0 23px;
+    padding:6px 14px;
+    background:#f046ba;
+    border-radius:6px;
+    cursor:pointer;
+    font-family:'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+.line{
+    background-color: black;
+    height:3px;
+    width:30vw;
+    position:absolute;
+}
+@media screen and (max-width:950px)
+{
+   .gameContainer{
+    flex-wrap: wrap;
+   }
+   .gameInfo{
+    margin-top:34px;
+   }
+   .gameInfo h1{
+    font-size: 1.5rem;
+   }
+   .container{
+       display:grid;
+       grid-template-rows:repeat(3,20vw);
+       grid-template-columns:repeat(3,20vw);
+   }
 }
