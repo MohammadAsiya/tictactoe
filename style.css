@@ -27,6 +27,7 @@ nav ul{
     grid-template-columns: repeat(3,10vw);
     grid-template-rows: repeat(3,10vw);
     font-family: 'Roboto', sans-serif;
+    position:relative;
 }
 .box{
     border:2px solid black;
@@ -77,10 +78,12 @@ nav ul{
     font-weight: bolder;
 }
 .line{
-    background-color: black;
+    background-color: rgb(222, 25, 130);
     height:3px;
-    width:30vw;
+    width:0vw;
     position:absolute;
+    transition:width 1s ease-in-out;
+
 }
 @media screen and (max-width:950px)
 {
