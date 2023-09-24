@@ -26,6 +26,8 @@ const checkWin = ()=>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText)&& (boxtext[e[0]].innerText !== '')){
             document.querySelector('.info').innerText = boxtext[e[0]].innerText + "Won";
             isgameover = true;
+            music.pause();
+            gameover.play();
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "256px";
             document.querySelector(".line").style.width = "20vw";
             document.querySelector(".line").style.transform =`translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
@@ -37,7 +39,7 @@ const checkWin = ()=>{
 
 
 //Game Logic
-//music.play()
+music.play();
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element =>{
    let  boxtext= element.querySelector('.boxtext');
